@@ -1,0 +1,353 @@
+@import "resets"
+
+$blue = rgb(38,0,253)
+$gray = rgb(208,208,208)
+
+html
+	font-family: 'arial', sans-serif
+	font-size: 13px
+	color: $blue
+	letter-spacing: 0.07em
+
+img
+	max-width: 100%
+	height: auto
+
+// TYPOGRAPHY
+.notbold
+	font-weight: normal !important
+
+h1.essay
+	text-align: center
+	background-color: $gray
+	font-size: 100px
+	font-weight: normal
+	padding-top: .4em
+	padding-bottom: 0.4em
+	transition:opacity .2s
+	&:hover
+		opacity:.5
+
+h1
+
+h2
+	text-transform: uppercase
+	margin: 0
+	margin-bottom: .5em
+
+h3
+
+h4
+	text-transform: uppercase
+	margin: 0
+
+h5, h6
+	font-size: 1em
+	margin-top: .5em
+	margin-bottom: .5em
+
+h6
+	font-weight: normal
+
+p
+	margin-top: 0
+	margin-bottom: 1em
+	letter-spacing: 0.03em
+	a
+		border-bottom: 1px $blue solid
+		padding-bottom: 2px
+
+div.dash
+	margin-bottom: 1.5em
+	margin-top: 1.5em
+
+// LINKS
+a,a:active,a:visited
+	color:inherit
+	transition:opacity .2s
+	text-decoration: none
+
+a:hover
+	opacity:.5
+
+$cols = 12
+$col = 76px
+$gutter = 20px
+.container
+	margin:0 auto
+	width: ($col * $cols)+($gutter * $cols)
+.row:before, .row:after
+	content:" "
+	display:table
+.row:after
+	clear: both
+.col
+	float: left
+	margin-left: ($gutter/2)
+	margin-right: ($gutter/2)
+.col1
+	width: (1*$col)+(0*$gutter)
+.col2
+	width: (2*$col)+(1*$gutter)
+.col3
+	width: (3*$col)+(2*$gutter)
+.col4
+	width: (4*$col)+(3*$gutter)
+.col5
+	width: (5*$col)+(4*$gutter)
+.col6
+	width: (6*$col)+(5*$gutter)
+.col7
+	width: (7*$col)+(6*$gutter)
+.col8
+	width: (8*$col)+(7*$gutter)
+.col9
+	width: (9*$col)+(8*$gutter)
+.col10
+	width: (10*$col)+(9*$gutter)
+.col11
+	width: (11*$col)+(10*$gutter)
+.col12
+	width: (12*$col)+(11*$gutter)
+
+.center-block
+	margin: 0 auto
+
+// BUTTON
+button, .button
+	background-color: $blue
+	color: white
+	border: none
+	font-size: .8em
+
+// HEADER
+header.col3
+	margin-top: 50px
+	line-height: 1.6em
+	letter-spacing: 0.09em
+	h3
+		font-weight: normal
+		text-transform: uppercase
+		margin: 0
+		font-size: 1.1em
+		margin-bottom: .5em
+	ul
+		margin: 0
+		margin-left: 1em
+		padding: 0
+		li
+			margin: 0
+			list-style: none
+	.active
+		font-weight: bold
+
+// MAIN
+#main-content
+	float: left
+	margin-top: 33px
+	padding-top: 33px
+	border-top: solid 2px $blue
+	max-width: (9*$col)+(9*$gutter)
+
+#main-content.main-content-index
+	padding-top: 10px
+
+// HOME
+body.home #main-content
+	width: (9*$col)+(9*$gutter)
+// 	.home-item
+// 		margin-bottom: $gutter
+
+.animatation-container
+	position: relative
+	margin-top: 20px
+
+.home-item
+	position: absolute
+	transition: all 0.8s
+	h1
+		margin-bottom: 0
+
+// ENGLISH FIRST
+.spanish-copy, .language-toggle-english
+	display: none
+
+// SINGLE HEADERS
+article
+	header
+		.provisional-title
+			margin-bottom: .5em
+
+		h4
+			width: 50%
+			float: left
+			margin-bottom: 1em
+		.language-toggles
+			width: 50%
+			float: left
+			font-size: .8em
+			line-height: 1.65em
+			letter-spacing: normal
+			span
+				border-bottom: 1px solid $blue
+				&:hover
+					cursor: pointer
+
+// BOOKS INDEXES
+#books
+	article
+		text-align: center
+		margin-bottom: 4em
+	article.upcoming-book
+		text-align: left
+		margin: 0 auto 4em auto
+		div.provisional-title
+			margin-top: 1em
+			margin-bottom: 1em
+
+// ESSAYS INDEX
+#essays
+	article.essay
+		margin-bottom: 2em
+		.essay-thumb
+			float: left
+			margin-right: 1em
+		.essay-info
+			float: left
+		.copy
+			margin-top: 1em
+		.dash
+			margin-top: -0.5em
+			margin-bottom: .5em
+
+.essay-download
+	margin-bottom: 1em
+
+// PUBLICATION
+	.post-content
+		h4
+			margin-bottom: 1em
+		.post-credits, .post-footer
+			font-size: .8em
+			line-height: 1.65em
+			letter-spacing: normal
+		.post-footer
+			font-style: italic
+	.post-buy
+		margin-bottom: 1.5em
+		margin-top: 1.5em
+
+// ORDER PAGE
+.order-item
+	margin-bottom: 2em
+	.post-credits
+		font-size: .8em
+		line-height: 1.65em
+		letter-spacing: normal
+
+// FOOTER
+footer
+	width: 100%;
+
+// MEDIA QUERIES
+@media screen and (max-width: 1252px)
+
+	$cols = 12
+	$col = 72px
+	$gutter = 18px
+	.container
+		margin:0 auto
+		width: ($col * $cols)+($gutter * $cols)
+	.row:before, .row:after
+		content:" "
+		display:table
+	.row:after
+		clear: both
+	.col
+		float: left
+		margin-left: ($gutter/2)
+		margin-right: ($gutter/2)
+	.col1
+		width: (1*$col)+(0*$gutter)
+	.col2
+		width: (2*$col)+(1*$gutter)
+	.col3
+		width: (3*$col)+(2*$gutter)
+	.col4
+		width: (4*$col)+(3*$gutter)
+	.col5
+		width: (5*$col)+(4*$gutter)
+	.col6
+		width: (6*$col)+(5*$gutter)
+	.col7
+		width: (7*$col)+(6*$gutter)
+	.col8
+		width: (8*$col)+(7*$gutter)
+	.col9
+		width: (9*$col)+(8*$gutter)
+	.col10
+		width: (10*$col)+(9*$gutter)
+	.col11
+		width: (11*$col)+(10*$gutter)
+	.col12
+		width: (12*$col)+(11*$gutter)
+
+	#main-content
+		max-width: (9*$col)+(9*$gutter)
+
+@media screen and (max-width: 1180px)
+
+	$cols = 12
+	$col = 66px
+	$gutter = 16px
+	.container
+		margin:0 auto
+		width: ($col * $cols)+($gutter * $cols)
+	.row:before, .row:after
+		content:" "
+		display:table
+	.row:after
+		clear: both
+	.col
+		float: left
+		margin-left: ($gutter/2)
+		margin-right: ($gutter/2)
+	.col1
+		width: (1*$col)+(0*$gutter)
+	.col2
+		width: (2*$col)+(1*$gutter)
+	.col3
+		width: (3*$col)+(2*$gutter)
+	.col4
+		width: (4*$col)+(3*$gutter)
+	.col5
+		width: (5*$col)+(4*$gutter)
+	.col6
+		width: (6*$col)+(5*$gutter)
+	.col7
+		width: (7*$col)+(6*$gutter)
+	.col8
+		width: (8*$col)+(7*$gutter)
+	.col9
+		width: (9*$col)+(8*$gutter)
+	.col10
+		width: (10*$col)+(9*$gutter)
+	.col11
+		width: (11*$col)+(10*$gutter)
+	.col12
+		width: (12*$col)+(11*$gutter)
+
+	#main-content
+		max-width: (9*$col)+(9*$gutter)
+
+// @media screen and (max-width: 1010px)
+//
+// 	.container
+// 		width: 90%
+//
+// 	header.col.col3
+// 		float: none
+// 		width: 100%
+//
+// 	#main-content
+// 		max-width: 100%
