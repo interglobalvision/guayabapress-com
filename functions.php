@@ -18,13 +18,13 @@ function my_scripts_method() {
 
 	/* lib.js is to bundle plugins. my.js is your scripts. enqueue more files as needed */
 
-    $jslib = $templateuri."lib.js";
+    $jslib = $templateuri . "library.js";
     wp_enqueue_script( 'jslib', $jslib,'','',true);
-    $myscripts = $templateuri."my.js";
+    $myscripts = $templateuri . "main.min.js";
     wp_enqueue_script( 'myscripts', $myscripts,'','',true);
 
 	/* enqueue stylesheet here. file does not exist until stylus file is processed */
-    wp_enqueue_style( 'site', get_stylesheet_directory_uri() . '/site.css' );
+    wp_enqueue_style( 'site', get_stylesheet_directory_uri() . '/css/site.css' );
 
 	/*
 	if you are not using stylus delete the site enqueue and uncomment these:
